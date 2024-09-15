@@ -1,0 +1,15 @@
+.header{
+    display: flex;
+    align-items: center;
+}
+.header img {
+    padding-left: 5%;
+}
+.header h1 {
+    text-align: center;
+    flex-grow: 1;
+}
+body{
+    margin: 0;
+    padding: 0;
+}
