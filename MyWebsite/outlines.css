@@ -9,6 +9,18 @@
     text-align: center;
     flex-grow: 1;
 }
+.navigation{
+    height: 50px;
+    list-style-type: none;
+    padding: 1%;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.block2 aside{
+    text-align: right;
+}
 body{
     margin: 0;
     padding: 0;
