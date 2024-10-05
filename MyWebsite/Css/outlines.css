@@ -56,7 +56,7 @@ body {
                 filter: drop-shadow(1vw 1vh 5px rgba(0 0 0 / 30%));
             }
         }
-        #block1{
+        .my_introduction{
             text-align: center;
             border: 5px solid #01060A;
             h2 {
@@ -77,7 +77,7 @@ body {
                 line-height: 2vh;
             }
         }
-        #block2{
+        .my_favourite_films{
             align-items: center;
             text-align: center;
 
@@ -94,24 +94,24 @@ body {
                 padding: 1rem;
                 font-size: 1.5vw;
                 filter: drop-shadow(1vw 1vh 5px rgba(0 0 0 / 30%));
-                #crossed {
+                .my_favourite_films__crossed {
                     margin: 0;
                     padding: 0;
                     text-decoration: line-through;
                 }
-                #underlined{
+                .my_favourite_films__underlined{
                     margin: 0;
                     padding: 0;
                     text-decoration: underline;
                 }
             }
-            #SecretMaterialsPic{
+            .my_favourite_films__secret_materials_pic{
                 width: 30%;
             }
-            #Gentleman{
+            .my_favourite_films__gentleman_pic{
                 width: 50%;
             }
-            #AngryMan{
+            .my_favourite_films__12_angry_man_pic{
                 width: 50%;
             }
             aside{
@@ -129,17 +129,17 @@ body {
             }
         }
 
-        #block3 {
+        .my_favourite_cartoon {
             text-align: center;
             border: 5px solid #01060A;
             font-size: 1vw;
             filter: drop-shadow(1vw 1vh 5px rgba(0 0 0 / 30%));
-            #phrase {
+            .my_favourite_cartoon__introduction {
                 margin: 0;
                 padding: 0;
                 font-size: 2vw;
             }
-            #AsciiPrint{
+            .my_favourite_cartoon__ascii_print{
                 margin: 0;
                 padding: 0;
                 font-family: monospace;
@@ -150,7 +150,7 @@ body {
                 color: #C0C7CF;
             }
         }
-        #block4 {
+        .feedback {
             text-align: center;
             font-size: 2vw;
             border: 5px solid #01060A;
@@ -159,7 +159,7 @@ body {
                 margin: 0;
                 padding: 0;
             }
-            #feedback{
+            .feedback__feedback_field{
                 width: 300px;
                 font-size: 13px;
                 padding: 6px 0 4px 10px;
@@ -168,7 +168,7 @@ body {
                 margin: 1.5vh;
             }
         }
-        #footer{
+        .footer_with_my_contacts{
             text-align: left;
             font-size: 1vw;
             border: 5px solid #01060A;
