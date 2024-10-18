@@ -33,13 +33,13 @@ body {
     main {
         overflow: auto;
         margin: 0;
-        max-height: 96vh;
+        max-height: 95vh;
         background-color: #495B71;
         color: #C89365;
         display: flex;
         flex-direction: column;
         .navigation_list {
-            height: 50px;
+            height: 10vh;
             list-style-type: none;
             display: flex;
             justify-content: space-between;
