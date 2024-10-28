@@ -1,7 +1,3 @@
-html {
-    overflow: hidden;
-    max-height: 100%;
-}
 body {
     background-color: #495B71;
     margin: 0;
@@ -13,11 +9,9 @@ body {
         background-color: #C0C7CF;
         align-items: center;
         text-align: center;
-        position: static;
         width: 100%;
         top: 0;
         z-index: 100;
-
         .header_img {
             padding: 0 10vw 0 10vw;
             width: 5vw;
@@ -34,8 +28,6 @@ body {
         }
     }
     main {
-        overflow: auto;
-        max-height: 92.5vh;
         background-color: #495B71;
         color: #C89365;
         display: flex;
