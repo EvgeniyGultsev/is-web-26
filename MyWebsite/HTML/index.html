@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <link href="../Css/outlines.css" rel="stylesheet">
+    <meta charset="UTF-8">
+    <meta name="keywords" content="кино,кинолюбитель,сериалы,фильмы,обзоры,">
+    <script src = "../Scripts/LoadTimer.js"></script>
+
+    <title>Блог кинолюбителя</title>
+</head>
+<body>
+<header>
+    <img src="../Pictures/directedBy.jpg" alt="Ну нет и нет, чо бубнить то" class = "header_img">
+    <h1 class = "header_siteName">Сайт Кинолюбителя</h1>
+</header>
+<main>
+    <nav class = "navigation">
+        <ul class="navigation_list" id = "navigation_list">
+            <li class = "navigation_list_buttonType"><a href="index.html">Обо мне</a>
+            <li class = "navigation_list_buttonType"><a href="MyFavouriteFilms.html">Мое любимое</a>
+            <li class = "navigation_list_buttonType"><a href="ToWatchInsertField.html">Собираюсь посмотреть</a>
+            <li class = "navigation_list_buttonType"><a href="SomePage.html">Лаб6</a>
+        </ul>
+    </nav>
+    <section>
+    <div id="my_introduction" class ="my_introduction">
+        <h2>Кто я и почему именно мой блог?</h2>
+        <div class = "my_introduction__my_picture"><img alt="Такая картинка с сигмой" src="../Pictures/Nerd-PNG-File.png"></div>
+        <article>
+            <p>Я человек, который всей душой любит кинематограф и хочет рассказать про него, поделиться своими впечатлениями, рассказать о своем опыте<br>
+                Так как я человек по профессии своей <em>никак не связан с кинематографом</em>, мое мнение <strong>не является экспертным</strong>, но пытается донестись от всей души.
+            </p>
+        </article>
+    </div>
+    <div id="feedback_field" class="feedback">
+        <label for="feedback">I need your feedback, pals</label><br>
+        <input id="feedback" class="feedback__feedback_field" name="feedback" placeholder="Here" required minlength="1"/>
+    </div>
+    </section>
+    <footer class="footer_with_my_contacts">
+        <q>Здесь могла быть чья либо реклама, но будет формула кинетической энергии: E<sub>к</sub> = mv<sup>2</sup>/2</q>
+        <p>Контактов для связи не будет, оставляйте идеи и комментарии в блоке выше</p>
+        <div class="load_timer" id = "loadtime"></div>
+    </footer>
+</main>
+<script src = "../Scripts/ActivePage.js"></script>
+</body>
+</html>
