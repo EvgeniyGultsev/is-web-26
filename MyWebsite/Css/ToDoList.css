@@ -1,0 +1,57 @@
+
+.state_change_button_crossed{
+    text-decoration: line-through;
+}
+.form{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-size: 2vw;
+    .input_field{
+        width: 80vw;
+        font-size: 13px;
+        padding: 6px 0 4px 10px;
+        border: 1px solid #cecece;
+        border-radius: 8px;
+        margin: 1vw 0 0 0 ;
+    }
+    .input_button{
+        border: 1px solid #cecece;
+        border-radius: 8px;
+    }
+}
+.display_buttons{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    list-style-type: none;
+    button{
+        background-color: #FCFDFF;
+        width: 20vw;
+        border-radius: 10px;
+    }
+    .active {
+        background-color: #C0C7CF;
+    }
+}
+.to_watch_films{
+    left: 5%;
+    position: relative;
+}
+.to_watch_active_item{
+    list-style-type: none;
+    display: grid;
+    grid-template-columns: 70% 5%;
+    column-gap: 10%;
+    .delete_buttons{
+        font-size: 1vw;
+        background-color: red;
+        color: white;
+    }
+    .state_change_button_crossed,.state_change_button_active{
+        background-color: #FCFDFF;
+        border-radius: 10px;
+        margin: 1vh 0 0 0 ;
+        font-size: 1.5vw;
+    }
+}

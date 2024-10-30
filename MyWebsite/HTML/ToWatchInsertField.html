@@ -2,6 +2,7 @@
 <html lang="en">
 <head>
     <link href="../Css/outlines.css" rel="stylesheet">
+    <link href="../Css/ToDoList.css" rel="stylesheet">
     <meta charset="UTF-8">
     <meta name="keywords" content="кино,кинолюбитель,сериалы,фильмы,обзоры,">
     <script src = "../Scripts/LoadTimer.js"></script>
@@ -21,13 +22,30 @@
             <li class = "navigation_list_buttonType"><a href="SomePage.html">Лаб6</a>
         </ul>
     </nav>
+    <form class="form" id = "form">
+            <label for="films_input">Enter your film to watch</label>
+        <div>
+            <input class = "input_field" type="text" name="films_input" id="films_input" required/>
+            <input class = "input_button" type="submit" value="+"/>
+        </div>
+    </form>
+    <div>
+        <ul class = "display_buttons">
+            <li><button class = "display_all active">All</button></li>
+            <li><button class = "display_planned">Will watch</button></li>
+            <li><button class = "display_watched">Watched</button></li>
+        </ul>
+        <ul class="to_watch_films" id = "to_watch_films">
 
+        </ul>
+    </div>
     <footer class="footer_with_my_contacts">
         <q>Здесь могла быть чья либо реклама, но будет формула кинетической энергии: E<sub>к</sub> = mv<sup>2</sup>/2</q>
         <p>Контактов для связи не будет, оставляйте идеи и комментарии в блоке выше</p>
         <div id = "loadtime"></div>
     </footer>
 </main>
-<script src = "../Scripts/ActivePage.js"></script>
 </body>
+<script src = "../Scripts/ActivePage.js"></script>
+<script src = "../Scripts/ToDoListScript.js"></script>
 </html>
