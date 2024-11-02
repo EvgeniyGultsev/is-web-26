@@ -1,24 +1,38 @@
 document.addEventListener("DOMContentLoaded", function() {
     // Добавление всех элементов на страницу
-    var getArr = localStorage.getItem('active_items');
+    let getArr = localStorage.getItem('active_items');
     getArr = JSON.parse(getArr);
     if (getArr != null){
-        for (var i = 0; i < getArr.length; i++){
-            document.getElementById("to_watch_films").innerHTML +=
-                "<li class = 'to_watch_active_item'><button class='state_change_button_active'>"
-                + getArr[i] +
-                "</button><button class = 'delete_buttons'>Delete</button></li>"
+        for (let i = 0; i < getArr.length; i++){
+            let elementToAdd = document.createElement("li");
+            elementToAdd.className = "to_watch_active_item"
+            let firstButton = document.createElement("button");
+            firstButton.className = "state_change_button_active"
+            firstButton.innerText = getArr[i]
+            elementToAdd.appendChild(firstButton);
+            let deleteButton = document.createElement("button");
+            deleteButton.className = "delete_buttons"
+            deleteButton.innerText = "Delete"
+            elementToAdd.appendChild(deleteButton);
+            document.getElementById("to_watch_films").appendChild(elementToAdd);
         }
     }
 
     getArr = localStorage.getItem('crossed_items');
     getArr = JSON.parse(getArr);
     if (getArr != null){
-        for (var j = 0; j < getArr.length; j++){
-            document.getElementById("to_watch_films").innerHTML +=
-                "<li class = 'to_watch_active_item'><button class='state_change_button_crossed'>"
-                + getArr[j] +
-                "</button><button class = 'delete_buttons'>Delete</button></li>"
+        for (let j = 0; j < getArr.length; j++){
+            let elementToAdd = document.createElement("li");
+            elementToAdd.className = "to_watch_active_item"
+            let firstButton = document.createElement("button");
+            firstButton.className = "state_change_button_crossed"
+            firstButton.innerText = getArr[j]
+            elementToAdd.appendChild(firstButton);
+            let deleteButton = document.createElement("button");
+            deleteButton.className = "delete_buttons"
+            deleteButton.innerText = "Delete"
+            elementToAdd.appendChild(deleteButton);
+            document.getElementById("to_watch_films").append(elementToAdd);
         }
     }
 
@@ -41,7 +55,7 @@ document.addEventListener("DOMContentLoaded", function() {
 
     // кнопки отображения
     document.querySelector(".display_all").onclick = function (){
-        var el = document.querySelectorAll(".state_change_button_active,.state_change_button_crossed")
+        const el = document.querySelectorAll(".state_change_button_active,.state_change_button_crossed");
 
         for (let i = 0; i < el.length; i++) {
             el[i].parentElement.style.display = "grid";
@@ -53,7 +67,7 @@ document.addEventListener("DOMContentLoaded", function() {
     }
 
     document.querySelector(".display_planned").onclick = function (){
-        var el = document.querySelectorAll(".state_change_button_active")
+        let el = document.querySelectorAll(".state_change_button_active");
         for (let i = 0; i < el.length; i++) {
             el[i].parentElement.style.display = "grid";
         }
@@ -68,7 +82,7 @@ document.addEventListener("DOMContentLoaded", function() {
     }
 
     document.querySelector(".display_watched").onclick = function (){
-        var el = document.querySelectorAll(".state_change_button_active")
+        let el = document.querySelectorAll(".state_change_button_active");
         for (let i = 0; i < el.length; i++) {
             el[i].parentElement.style.display = "none";
         }
@@ -87,21 +101,29 @@ document.getElementById("form").addEventListener("submit", function(e) {
     e.preventDefault()
     const data = new FormData(e.target);
 
-    var getActiveArr = localStorage.getItem('active_items');
+    let getActiveArr = localStorage.getItem('active_items');
     getActiveArr = JSON.parse(getActiveArr);
 
     if (getActiveArr == null){ getActiveArr = [] }
 
-    var getCrossedArr = localStorage.getItem('crossed_items');
+    let getCrossedArr = localStorage.getItem('crossed_items');
     getCrossedArr = JSON.parse(getCrossedArr);
     if (getCrossedArr == null){ getCrossedArr = [] }
 
     //Проверка, есть ли он уже в списке
     if (getActiveArr.indexOf([...data.entries()][0][1]) === -1 && getCrossedArr.indexOf([...data.entries()][0][1]) === -1){
-        document.getElementById("to_watch_films").innerHTML +=
-            "<li class = 'to_watch_active_item'><button class='state_change_button_active'>"
-            + [...data.entries()][0][1] +
-            "</button class = 'delete_button'><button class = delete_buttons>Delete</button></li>"
+        let elementToAdd = document.createElement("li");
+        elementToAdd.className = "to_watch_active_item"
+        let firstButton = document.createElement("button");
+        firstButton.className = "state_change_button_active"
+        firstButton.innerText = [...data.entries()][0][1]
+        elementToAdd.appendChild(firstButton);
+        let deleteButton = document.createElement("button");
+        deleteButton.className = "delete_buttons"
+        deleteButton.innerText = "Delete"
+        elementToAdd.appendChild(deleteButton);
+
+        document.getElementById("to_watch_films").append(elementToAdd)
 
         // почему то, если добавлять новый on-click только одному, на всех остальных он сбрасывается
         let elements = document.querySelectorAll(".state_change_button_active,.state_change_button_crossed")
@@ -122,7 +144,7 @@ document.getElementById("form").addEventListener("submit", function(e) {
 
         getActiveArr.push([...data.entries()][0][1]);
         getActiveArr = getActiveArr.sort()
-        var array = JSON.stringify(getActiveArr);
+        const array = JSON.stringify(getActiveArr);
 
         localStorage.setItem('active_items', array);
     }
@@ -133,14 +155,14 @@ document.getElementById("form").addEventListener("submit", function(e) {
     //Измменить состояние элемента(просмотрен или нет)
 function change_state(e){
     e.preventDefault();
-    var classname = e.target.className;
-    var buttonText= e.target.firstChild.textContent;
+    const classname = e.target.className;
+    const buttonText = e.target.firstChild.textContent;
 
-    var activeArray = JSON.parse(localStorage.getItem('active_items'));
+    let activeArray = JSON.parse(localStorage.getItem('active_items'));
     if (activeArray == null){
         activeArray = []
     }
-    var crossedArray = JSON.parse(localStorage.getItem('crossed_items'));
+    let crossedArray = JSON.parse(localStorage.getItem('crossed_items'));
     if (crossedArray == null){
         crossedArray = []
     }
@@ -178,13 +200,13 @@ function change_state(e){
 // удаление элемента
 function delete_buttons(e){
     e.preventDefault()
-    var buttonText= e.target.parentNode.firstChild.textContent;
+    const buttonText = e.target.parentNode.firstChild.textContent;
 
-    var activeArray = JSON.parse(localStorage.getItem('active_items'));
+    let activeArray = JSON.parse(localStorage.getItem('active_items'));
     if (activeArray == null){
         activeArray = []
     }
-    var crossedArray = JSON.parse(localStorage.getItem('crossed_items'));
+    let crossedArray = JSON.parse(localStorage.getItem('crossed_items'));
     if (crossedArray == null){
         crossedArray = []
     }

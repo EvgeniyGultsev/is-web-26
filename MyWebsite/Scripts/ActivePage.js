@@ -9,6 +9,6 @@ else if (name === "MyFavouriteFilms.html"){
 else if (name === "ToWatchInsertField.html"){
     document.getElementById("navigation_list").children[2].className = "active_navigation_list_button_type"
 }
-else if (name === "SomePage.html"){
+else if (name === "ActiveUsers.html"){
     document.getElementById("navigation_list").children[3].className = "active_navigation_list_button_type"
 }
