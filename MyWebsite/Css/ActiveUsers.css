@@ -1,0 +1,11 @@
+.preloader{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+.user{
+    color: #C0C7CF;
+}
+.error{
+    color: red;
+}
