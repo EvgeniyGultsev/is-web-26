@@ -15,7 +15,7 @@ document.addEventListener('DOMContentLoaded', async () => {
     }
 
     for(countCycles=1;countCycles<=allCycles;countCycles++){
-        console.log(array.splice(Math.random()*array.length,1)[0])
+        array.splice(Math.random()*array.length,1)
     }
 
     let urls = [
