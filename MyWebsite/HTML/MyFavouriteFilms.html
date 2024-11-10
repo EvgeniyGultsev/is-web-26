@@ -2,9 +2,12 @@
 <html lang="en" xmlns="http://www.w3.org/1999/html" xmlns="http://www.w3.org/1999/html">
 <head>
     <link href="../Css/outlines.css" rel="stylesheet">
+    <link href="../Css/swiper.css" rel="stylesheet">
     <meta charset="UTF-8">
     <meta name="keywords" content="кино,кинолюбитель,сериалы,фильмы,обзоры,">
     <script src = "../Scripts/LoadTimer.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.css">
+    <script src="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.js"></script>
     <title>Блог кинолюбителя</title>
 </head>
 <body>
@@ -24,13 +27,22 @@
     <section>
         <div id="my_favourite_films" class = "my_favourite_films">
             <h2>Мои любимые фильмы и сериалы</h2>
-            <ol>
-                <li>Секретные материалы<br><img class = "my_favourite_films__secret_materials_pic" alt="Ну тут такой Дэвид Духовны" src="../Pictures/XFiles.jpg"></li>
-                <li><p class = "my_favourite_films__crossed">Большой куш</p>
-                    <p class = "my_favourite_films__underlined">Джентльмены</p>
-                    <img alt="Постер" src="../Pictures/Gentleman.jpg" class = "my_favourite_films__gentleman_pic"></li>
-                <li>12 разгневанных мужчин<br><img alt="Ну мужики такие в суде присяжных" src="../Pictures/12AngryMan.jpg" class = "my_favourite_films__12_angry_man_pic"></li>
-            </ol>
+            <div class="swiper sample-slider">
+                <div class="swiper-wrapper">
+                    <div class="swiper-slide">
+                        <div class="swiper_content"><p>Секретные материалы</p><img class = "my_favourite_films__secret_materials_pic" alt="Ну тут такой Дэвид Духовны" src="../Pictures/XFiles.jpg"></div>
+                    </div>
+                    <div class="swiper-slide"><div class="swiper_content">
+                        <p class = "my_favourite_films__underlined">Джентльмены</p><img alt="Постер" src="../Pictures/Gentleman.jpg" class = "my_favourite_films__gentleman_pic">
+                    </div></div>
+                    <div class="swiper-slide"><div class="swiper_content">
+                        <p>12 разгневанных мужчин</p><img alt="Ну мужики такие в суде присяжных" src="../Pictures/12AngryMan.jpg" class = "my_favourite_films__12_angry_man_pic">
+                    </div></div>
+                    <div class="swiper-slide"><p>Оно</p><img src="../Pictures/it.jpg" alt="страшный клоун" class = "my_favourite_films__it"></div>
+                </div>
+                <div class="swiper-button-prev"></div>
+                <div class="swiper-button-next"></div>
+            </div>
             <aside><a href="https://ru.wikipedia.org/wiki/%D0%A4%D0%B8%D1%88%D0%B5%D1%80_(%D1%81%D0%B5%D1%80%D0%B8%D0%B0%D0%BB)" target="_blank">
                 Вообще из последнего понравился <i>Фишер</i>, но многим не понравится его недостоверность, смотреть на свой страх и риск
             </a></aside>
@@ -91,5 +103,6 @@
     </footer>
 </main>
 <script src = "../Scripts/ActivePage.js"></script>
+<script src = "../Scripts/swiper.js"></script>
 </body>
 </html>

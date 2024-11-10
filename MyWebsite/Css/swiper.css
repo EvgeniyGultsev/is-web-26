@@ -1,0 +1,27 @@
+.sample-slider {
+    width:100%;
+
+    .my_favourite_films__secret_materials_pic{
+       height: 65vh;
+    }
+    .my_favourite_films__gentleman_pic{
+        width: 44.5vh;
+    }
+    .my_favourite_films__12_angry_man_pic{
+        width: 42vh;
+    }
+    .my_favourite_films__it{
+        width: 45vh
+    }
+}
+.swiper_content{
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    img{
+        margin: 0 auto;
+    }
+}
+.swiper-slide{
+    height: 70vh !important;
+}

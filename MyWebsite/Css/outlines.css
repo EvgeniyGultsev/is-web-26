@@ -119,34 +119,6 @@ body {
                 font-size: 2vw;
                 filter: drop-shadow(1vw 1vh 5px rgba(0 0 0 / 30%));
             }
-            ol{
-                display: flex;
-                flex-direction: row;
-                list-style-position: inside;
-
-                font-size: 1.5vw;
-                filter: drop-shadow(1vw 1vh 5px rgba(0 0 0 / 30%));
-                .my_favourite_films__crossed {
-                    margin: 0;
-                    padding: 0;
-                    display: inline;
-                    text-decoration: line-through;
-                }
-                .my_favourite_films__underlined{
-                    margin: 0;
-                    padding: 0;
-                    text-decoration: underline;
-                }
-            }
-            .my_favourite_films__secret_materials_pic{
-                width: 30%;
-            }
-            .my_favourite_films__gentleman_pic{
-                width: 50%;
-            }
-            .my_favourite_films__12_angry_man_pic{
-                width: 50%;
-            }
             aside{
                 display: none;
             }
