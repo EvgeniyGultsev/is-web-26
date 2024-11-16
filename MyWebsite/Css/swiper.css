@@ -2,16 +2,16 @@
     width:100%;
 
     .my_favourite_films__secret_materials_pic{
-       height: 65vh;
+       height: 45vh;
     }
     .my_favourite_films__gentleman_pic{
-        width: 44.5vh;
+        width: 31vh;
     }
     .my_favourite_films__12_angry_man_pic{
-        width: 42vh;
+        width: 29vh;
     }
     .my_favourite_films__it{
-        width: 45vh
+        width: 30vh
     }
 }
 .swiper_content{
